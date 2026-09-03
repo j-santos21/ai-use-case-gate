@@ -1,0 +1,66 @@
+{
+  "_note": "SIMULATED DATA. Requirements written the way stakeholders actually write them, including the ones that cannot be accepted as worded. UC-02 is used as the worked example because it is the cleanest BUILD in the portfolio, not because it is the most interesting.",
+  "requirements": [
+    {
+      "id": "R-01",
+      "use_case_id": "UC-02",
+      "source": "Director, Outsourcing (intake workshop)",
+      "text": "The system shall accurately extract payment terms, change order thresholds, and termination clauses from executed CRO agreements."
+    },
+    {
+      "id": "R-02",
+      "use_case_id": "UC-02",
+      "source": "Analyst, after R-01 rewrite session",
+      "text": "On a held-out set of executed CRO agreements labeled by two contract managers, the system shall achieve extraction accuracy of at least 95% across the three target field groups.",
+      "metric": "extraction accuracy",
+      "threshold": 0.95,
+      "expected": 0.97,
+      "minutes_per_label": 12.0
+    },
+    {
+      "id": "R-03",
+      "use_case_id": "UC-02",
+      "source": "R&D Quality reviewer",
+      "text": "The system shall log every extraction event with the source document version, the model version, the prompt version, and the identity of the reviewing user."
+    },
+    {
+      "id": "R-04",
+      "use_case_id": "UC-02",
+      "source": "Director, Outsourcing",
+      "text": "The system shall return extracted values within 60 seconds of document upload."
+    },
+    {
+      "id": "R-05",
+      "use_case_id": "UC-02",
+      "source": "Contract manager focus group",
+      "text": "Extracted values shall be presented in a clear and user-friendly layout alongside the relevant source text."
+    },
+    {
+      "id": "R-06",
+      "use_case_id": "UC-02",
+      "source": "R&D Quality reviewer",
+      "text": "Every extracted value shall be traceable to the exact clause it came from, with citation integrity of at least 99%.",
+      "metric": "citation integrity",
+      "threshold": 0.99,
+      "expected": 0.99,
+      "minutes_per_label": 4.0
+    },
+    {
+      "id": "R-07",
+      "use_case_id": "UC-02",
+      "source": "Director, Outsourcing",
+      "text": "The system shall reject documents that are not executed CRO agreements rather than attempting extraction.",
+      "metric": "refusal rate",
+      "threshold": 0.98,
+      "expected": 0.995,
+      "minutes_per_label": 1.5,
+      "analyst_override": "Written as a deterministic behavior. It is a rate claim: whether a given document is an executed agreement is a judgment the system will sometimes get wrong. Routed to statistical testing by analyst override."
+    },
+    {
+      "id": "R-08",
+      "use_case_id": "UC-02",
+      "source": "Contract manager focus group",
+      "text": "The system should be reliable and require minimal rework."
+    }
+  ]
+}

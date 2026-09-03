@@ -1,0 +1,148 @@
+{
+  "_note": "SIMULATED DATA. These are plausible R&D technology intake requests constructed to exercise the model across its full disposition range. No real program, system, or scoring session is represented. Scores reflect one analyst's reading of the rubric anchors in gate/intake.py.",
+  "use_cases": [
+    {
+      "id": "UC-01",
+      "title": "Protocol deviation triage and severity pre-classification",
+      "function": "Clinical Operations",
+      "sponsor": "Sr Director, Clinical Quality",
+      "note": "Deviations arrive as free text from sites and are hand-sorted before review. Volume is the constraint, not judgment.",
+      "scores": {
+        "volume": 5, "time_displaced": 3, "strategic_pull": 4,
+        "consequence_of_error": 3, "ground_truth": 2, "verifiability": 2, "regulatory_scope": 3
+      }
+    },
+    {
+      "id": "UC-02",
+      "title": "CRO contract term extraction into the vendor register",
+      "function": "R&D Procurement",
+      "sponsor": "Director, Outsourcing",
+      "note": "Payment terms, change order thresholds, and termination clauses are keyed by hand from executed agreements.",
+      "scores": {
+        "volume": 4, "time_displaced": 4, "strategic_pull": 3,
+        "consequence_of_error": 2, "ground_truth": 1, "verifiability": 1, "regulatory_scope": 1
+      }
+    },
+    {
+      "id": "UC-03",
+      "title": "Literature screening for safety signal candidates",
+      "function": "Pharmacovigilance",
+      "sponsor": "Head of Signal Management",
+      "note": "Abstract-level screening ahead of full-text review. Recall matters far more than precision.",
+      "scores": {
+        "volume": 5, "time_displaced": 2, "strategic_pull": 5,
+        "consequence_of_error": 5, "ground_truth": 2, "verifiability": 2, "regulatory_scope": 5
+      }
+    },
+    {
+      "id": "UC-04",
+      "title": "Clinical study report patient narrative drafting",
+      "function": "Medical Writing",
+      "sponsor": "Director, Regulatory Writing",
+      "note": "First-draft narratives from structured subject data, edited by a writer before QC.",
+      "scores": {
+        "volume": 4, "time_displaced": 4, "strategic_pull": 4,
+        "consequence_of_error": 4, "ground_truth": 3, "verifiability": 2, "regulatory_scope": 4
+      }
+    },
+    {
+      "id": "UC-05",
+      "title": "Internal R&D policy and SOP question answering",
+      "function": "R&D Quality",
+      "sponsor": "Associate Director, Quality Systems",
+      "note": "Staff ask where a procedure lives and what it requires. Currently a shared mailbox.",
+      "scores": {
+        "volume": 5, "time_displaced": 1, "strategic_pull": 2,
+        "consequence_of_error": 3, "ground_truth": 2, "verifiability": 1, "regulatory_scope": 2
+      }
+    },
+    {
+      "id": "UC-06",
+      "title": "Adverse event case coding to MedDRA preferred terms",
+      "function": "Pharmacovigilance",
+      "sponsor": "Director, Case Processing",
+      "note": "High volume, existing coded history available as labels, but the output lands in a regulated case record.",
+      "scores": {
+        "volume": 5, "time_displaced": 2, "strategic_pull": 4,
+        "consequence_of_error": 5, "ground_truth": 1, "verifiability": 2, "regulatory_scope": 5
+      }
+    },
+    {
+      "id": "UC-07",
+      "title": "Site feasibility questionnaire first-pass responses",
+      "function": "Clinical Operations",
+      "sponsor": "Manager, Site Startup",
+      "note": "Repetitive sponsor questionnaires answered from prior submissions.",
+      "scores": {
+        "volume": 3, "time_displaced": 3, "strategic_pull": 2,
+        "consequence_of_error": 2, "ground_truth": 3, "verifiability": 2, "regulatory_scope": 2
+      }
+    },
+    {
+      "id": "UC-08",
+      "title": "Investigator brochure section drafting from source studies",
+      "function": "Medical Writing",
+      "sponsor": "Sr Manager, Scientific Communications",
+      "note": "Synthesis across nonclinical and clinical sources into narrative sections.",
+      "scores": {
+        "volume": 2, "time_displaced": 5, "strategic_pull": 3,
+        "consequence_of_error": 4, "ground_truth": 4, "verifiability": 4, "regulatory_scope": 4
+      }
+    },
+    {
+      "id": "UC-09",
+      "title": "SOP change impact analysis across the document hierarchy",
+      "function": "R&D Quality",
+      "sponsor": "Director, Document Control",
+      "note": "When a parent SOP changes, identify every downstream document and training assignment affected.",
+      "scores": {
+        "volume": 2, "time_displaced": 4, "strategic_pull": 3,
+        "consequence_of_error": 4, "ground_truth": 2, "verifiability": 2, "regulatory_scope": 4
+      }
+    },
+    {
+      "id": "UC-10",
+      "title": "Governance board minutes and action item extraction",
+      "function": "R&D Portfolio Management",
+      "sponsor": "Chief of Staff, R&D",
+      "note": "Recorded governance meetings summarized into minutes and tracked actions.",
+      "scores": {
+        "volume": 2, "time_displaced": 2, "strategic_pull": 3,
+        "consequence_of_error": 2, "ground_truth": 3, "verifiability": 1, "regulatory_scope": 1
+      }
+    },
+    {
+      "id": "UC-11",
+      "title": "Target hypothesis generation from internal and public datasets",
+      "function": "Discovery Research",
+      "sponsor": "Sr Director, Computational Biology",
+      "note": "Open-ended generation of candidate mechanisms for scientific review.",
+      "scores": {
+        "volume": 1, "time_displaced": 5, "strategic_pull": 4,
+        "consequence_of_error": 2, "ground_truth": 5, "verifiability": 4, "regulatory_scope": 1
+      }
+    },
+    {
+      "id": "UC-12",
+      "title": "Lab notebook semantic search across legacy archives",
+      "function": "Discovery Research",
+      "sponsor": "Manager, Research Informatics",
+      "note": "Twenty years of scanned and typed notebooks with inconsistent structure.",
+      "scores": {
+        "volume": 2, "time_displaced": 3, "strategic_pull": 2,
+        "consequence_of_error": 2, "ground_truth": 4, "verifiability": 3, "regulatory_scope": 2
+      }
+    },
+    {
+      "id": "UC-13",
+      "title": "First-line review of informed consent form translations",
+      "function": "Clinical Operations",
+      "sponsor": "Manager, Site Startup",
+      "note": "Reviewing vendor-supplied ICF translations before IRB submission. Appealing on its face and expensive to prove.",
+      "scores": {
+        "volume": 1, "time_displaced": 3, "strategic_pull": 1,
+        "consequence_of_error": 5, "ground_truth": 3, "verifiability": 3, "regulatory_scope": 5
+      }
+    }
+  ]
+}
